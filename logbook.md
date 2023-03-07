@@ -75,16 +75,16 @@
 - Meeting: weekly @1200 BT 42 mins
   - present: AM, DM, RS
     - Feedback on example test case from DM
-     - AM: Setup VScode to be POSIX compliant - use Nik's recommendations & 
+     - AM: Setup VScode to be POSIX compliant - use Nik's recommendations &
      VScode link as guide.
      - AM: Avoid commiting commented code - code should be clean.
      - AM: Only use module name top in hierarchical designs.
-     - AM: Come up with/ describe naming convention for signals in interfaces 
+     - AM: Come up with/ describe naming convention for signals in interfaces
            and signals in modules.
  - DM: Take AM through pull & push request basics later today.
  - DM: Send AM 'boilerplate' for inst, port and svi testcases.
  - DM: AM to use makefile examples from DM as a guide/ starter.
- - RS: AM to seek help from RS when making makefiles for testcases; some errors 
+ - RS: AM to seek help from RS when making makefiles for testcases; some errors
        may be subtle and can be fixed quickly by an experienced user.
  - AM: Make 15 initial test cases recommended by DM.
 - Meeting: Pull requests and Makefile Intro @ 16:30 NT 60mins
@@ -97,12 +97,12 @@
 ----------
 - DDF meeting
 - Started work on first 15 initial testcases
-  - Made 2 simple test cases using always_ff in the files 
+  - Made 2 simple test cases using always_ff in the files
     `alwaysff_port.sv` & `alwaysff_svi.sv`.
-  - Made 2 simple test cases using always_latch in the files 
+  - Made 2 simple test cases using always_latch in the files
     `alwayslatch_inst.sv` & `alwayslatch_svi.sv`.
   - Did a quick check of testcases in Vivado;
-    - Only 2x test cases with *_port.sv from 8/15 test cases are elaborated 
+    - Only 2x test cases with *_port.sv from 8/15 test cases are elaborated
       (Including `test1.sv`).
     - All other test cases are not elaborated.
     - Only `test1.sv` is synthesizable.
@@ -129,3 +129,69 @@
 - Other testcases failed to elaborate in Vivado.
 - To Do
   - Start tutorials/ work on Makefiles.
+
+2023-02-22
+----------
+- Make reads/ tutorials.
+- Weekly Meeting @13:00 NT 25 mins
+  - Present: AM, DM, RS, MO
+  - AM: Updated team on progress.
+  - DM: Accepted 2x pull requests from AM.
+  - DM: Updated MO on thesis progress and tasks.
+  - RS/DM: Clarified mentioning tool names in logbook.
+  - MO: AM to share overleaf of thesis report with MO.
+  - DM: AM to focus on setting up intrasftructure (Makefiles) for tests.
+  - Meeting time changed to 14:00. Requested by BD; accepted by all.
+  - AM: Future pull requests to DM should be to master branch.
+
+2023-02-23
+----------
+- Make reads/ tutorials.
+- Makefile for Yosys linter done.
+  - Exits on error - does not check remaining files; to fix.
+
+2023-02-27
+----------
+- Attempted fixing testcases that generated no netlist.
+- DDD presentation on Project.
+
+2023-02-28
+----------
+- Makefile for icarus:
+ - Exits on error - does not check remaining files; to fix.
+ - Fixed with || true.
+- Makefile for svlint:
+ - Checks first file only; to fix.
+ - Checks all files but writes stderr into the first .txt file; to fix.
+ - Fixed by piping to true.
+ - Alternate syntax <svlint -- --lint> may be better for clarity.
+- Fixed yosys linter exiting due to 'error' issue.
+- Fixed verilator linter exiting due to 'error' issue.
+- Running Verilator,Yosys,Svlint and Icarus Linters at once.
+- Started looking into Questa and Spyglass userguide for command line syntaxes.
+
+2023-03-01
+----------
+- Weekly Meeting @14:00 NT 25 mins
+  - Present: AM, DM, RS
+  - DM: AM to still focus on test infrastructure for now.
+  - DM/ RS: Possibility of investigating a real corner case from the design team
+    later on.
+  - AM: To keep the warnings/error messages from linters as they are - do not
+    try to 'fix' the test cases.
+- Master thesis report - Chapter 1 (Introduction/Motivation) write up.
+- Pull request to DM - Makefiles for 4x tools.
+
+2023-03-02
+----------
+- Project report structure setup.
+- Intro text to Methodology and Experiment chapters.
+- Talking points for Theory chapter.
+- Review and addition of text/improved structure of chapter 1 of report.
+- DDF meeting.
+
+
+2023-03-07
+----------
+- Incorporated feedback from DM & BD into draft thesis report.
+- Worked on comments from DM from pull request; handling errors in GNU make.
